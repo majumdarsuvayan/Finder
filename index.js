@@ -39,7 +39,7 @@ function timer() {
   }
   if(strike>4)
   {
-  
+  window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
   }
   document.getElementById("timer").innerHTML = count;
 }
@@ -65,12 +65,20 @@ function modelLoaded() {
   console.log("Model loaded");
   Status = true;
 }
-
+function preload(){
+song = loadSound("finder.mp3");
+}
 function draw() {
   image(video, 0, 0, 300, 300);
   if (Status !== "") {
     object_Detector.detect(video, gotResults);
   }
+}
+function play()
+{
+song.play();
+song.setVolume(1);
+song.rate(1);
 }
 
 function gotResults(error, results) {

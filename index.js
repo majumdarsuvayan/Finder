@@ -37,10 +37,7 @@ function timer() {
   {
   strike=strike+1;  
   }
-  if(strike>4)
-  {
-  window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-  }
+
   document.getElementById("timer").innerHTML = count;
 }
 
@@ -59,6 +56,7 @@ function start() {
   random = Math.floor(Math.random() * items.length);
   document.getElementById("display").innerHTML = items[random];
   strike=0;
+  play();
 }
 
 function modelLoaded() {
